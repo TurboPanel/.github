@@ -1,0 +1,6 @@
+{
+  "sonarlint.connectedMode.project": {
+    "connectionId": "turbopanel",
+    "projectKey": "turbopanel_.github"
+  }
+}

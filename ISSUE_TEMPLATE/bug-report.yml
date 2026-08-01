@@ -1,0 +1,103 @@
+name: Bug report
+description: Report a reproducible defect in TurboPanel
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Control plane (turbopanel)
+        - Daemon (turbopaneld)
+        - UI (ui)
+        - Dev tooling (dev)
+        - Website / docs (website)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment type
+      options:
+        - TurboPanel High Availability (managed)
+        - Self-hosted
+        - Contributor dev environment
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Debian 13 (Trixie)
+        - Debian 12 (Bookworm)
+        - Raspberry Pi OS 64-bit
+        - Other Linux
+        - macOS (contributor only)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: arch
+    attributes:
+      label: Architecture
+      options:
+        - x86_64 (amd64)
+        - aarch64 (arm64)
+        - Other / unsupported
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Control plane version, daemon version, UI build, or commit SHAs
+      placeholder: e.g. turbopaneld 2025.08.01-release, turbopanel trunk@abc1234
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps another operator can follow
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (redacted)
+      description: Relevant journalctl or file logs — remove secrets, tokens, and hostnames if needed
+      render: shell
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues and Discussions for duplicates
+          required: true

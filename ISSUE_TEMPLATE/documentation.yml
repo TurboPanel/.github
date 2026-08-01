@@ -1,0 +1,31 @@
+name: Documentation
+description: Report unclear, missing, or incorrect documentation
+title: "[docs]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or path
+      placeholder: e.g. https://turbopanel.io/docs/deployment/daemon-setup or docs/deployment/daemon-setup.mdx
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement (optional)
+
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Contribution
+      options:
+        - label: I am willing to open a PR on turbopanel/website

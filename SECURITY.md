@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-TurboPanel is in **public beta**. We provide security fixes for the current release channel artifacts published on GitHub Releases:
+TurboPanel is in **private alpha**. We provide security fixes for the current release channel artifacts published on GitHub Releases:
 
 | Channel | Support |
 | --- | --- |

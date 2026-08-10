@@ -21,7 +21,7 @@
 | Public name | Repository | Role |
 | --- | --- | --- |
 | **TurboPanel Control Plane** | [turbopanel/turbopanel](https://github.com/turbopanel/turbopanel) | API, auth, orchestration hub |
-| **TurboPanel Daemon** | [turbopanel/turbopaneld](https://github.com/turbopanel/turbopaneld) | Node agent on every managed host |
+| **TurboPanel Daemon** | [turbopanel/turbopaneld](https://github.com/turbopanel/turbopaneld) | Host daemon on every managed host |
 | **TurboPanel UI** | [turbopanel/ui](https://github.com/turbopanel/ui) | Signed-in product console |
 | **TurboPanel Development Environment** | [turbopanel/dev](https://github.com/turbopanel/dev) | Contributor dev console |
 | **TurboPanel Website & Docs** | [turbopanel/website](https://github.com/turbopanel/website) | Marketing site and documentation |

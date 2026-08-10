@@ -7,7 +7,7 @@ Thank you for helping improve TurboPanel. This file is the short routing guide; 
 | Change | Repository |
 | --- | --- |
 | Control plane API, auth, daemon cell, database schema | [turbopanel/turbopanel](https://github.com/turbopanel/turbopanel) |
-| Node agent, Ansible roles, deploy runtime | [turbopanel/turbopaneld](https://github.com/turbopanel/turbopaneld) |
+| Host daemon, Ansible roles, deploy runtime | [turbopanel/turbopaneld](https://github.com/turbopanel/turbopaneld) |
 | Signed-in product console (Expo / Tamagui) | [turbopanel/ui](https://github.com/turbopanel/ui) |
 | Marketing site and documentation (MDX) | [turbopanel/website](https://github.com/turbopanel/website) |
 | Contributor development console | [turbopanel/dev](https://github.com/turbopanel/dev) |
@@ -32,6 +32,19 @@ Each repo runs local checks before commit:
 | `turbopanel` | `scan-secrets.sh` → typecheck/tests (Deno) |
 
 Set `TURBOPANEL_SKIP_HOOK_TESTS=1` only when the toolchain is absent locally.
+
+## Vocabulary
+
+The TurboPanel daemon (`turbopaneld`) is a **daemon** / **host daemon** — it stopped being described
+with pre-rename "agent" phrasing once the daemon build-identity contract was renamed to
+`daemonBuild`. Each product repo runs a vocabulary check (`check:vocabulary`, wired into CI alongside
+the other gates above) that rejects that retired phrasing (see each checker's `FORBIDDEN_PHRASES`
+list) in human-authored source and docs. `AGENTS.md` coding-agent policy sections, `.agents/skills`,
+HTTP `User-Agent`, generated type files, migrations, lockfiles, and dependency names (e.g.
+`agent-base`) are allowlisted. This repo's own community-health docs are covered by
+`scripts/check-vocabulary.sh` (run `sh scripts/check-vocabulary.sh`); the daemon, instance, and
+website repos each carry an equivalent Deno/Node checker — keep the forbidden-phrase lists in sync
+as the vocabulary evolves.
 
 ## Code of conduct
 

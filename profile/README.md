@@ -7,14 +7,16 @@
 </p>
 
 <p align="center">
-  <a href="https://turbopanel.io/pricing?utm_source=github-org-profile">Use TurboPanel Managed</a> ·
-  <a href="https://turbopanel.io/docs/deployment/self-hosted?utm_source=github-org-profile">Self-host TurboPanel</a> ·
+  <a href="https://turbopanel.io/pricing?utm_source=github-org-profile">Join the waitlist</a> ·
+  <a href="https://turbopanel.io/docs/deployment/self-hosted?utm_source=github-org-profile">Preview self-hosted docs</a> ·
   <a href="https://turbopanel.io/docs?utm_source=github-org-profile">Documentation</a>
 </p>
 
 <p align="center">
   <img src="https://turbopanel.io/screenshots/servers-overview.png" alt="TurboPanel servers overview" width="720" />
 </p>
+
+> **Private alpha** — Neither TurboPanel High Availability nor self-hosted is publicly available yet. We're working toward a beta release — see the [roadmap](https://turbopanel.io/roadmap).
 
 ## Repositories
 
@@ -32,9 +34,9 @@ All application code is licensed under [AGPL-3.0-only](https://github.com/turbop
 
 ## Community
 
-- [Roadmap](https://turbopanel.io/roadmap) — shipped phases and what we are building now
+- [Roadmap](https://turbopanel.io/roadmap) — our progress toward a beta release
 - [Releases](https://github.com/turbopanel/turbopanel/releases) — versioned artifacts and upgrade notes
-- [Discussions](https://github.com/turbopanel/turbopanel/discussions) — help, ideas, and announcements
+- [Discord](https://turbopanel.io/discord) — help, ideas, and announcements
 - [Security policy](https://turbopanel.io/security) — supported versions and private reporting
 
 ## Maintainers

@@ -12,7 +12,7 @@ Thank you for helping improve TurboPanel. This file is the short routing guide; 
 | Marketing site and documentation (MDX) | [turbopanel/website](https://github.com/turbopanel/website) |
 | Contributor development console | [turbopanel/dev](https://github.com/turbopanel/dev) |
 
-Discuss larger changes in [Discussions](https://github.com/turbopanel/turbopanel/discussions) before opening a large PR.
+Discuss larger changes in [Discord](https://turbopanel.io/discord) before opening a large PR.
 
 ## Development setup
 

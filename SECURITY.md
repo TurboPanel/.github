@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-TurboPanel is in **private alpha**. We provide security fixes for the current release channel artifacts published on GitHub Releases:
+TurboPanel is in **private alpha**. Neither TurboPanel High Availability nor self-hosted is publicly available yet — we provide security fixes for the current release channel artifacts published on GitHub Releases:
 
 | Channel | Support |
 | --- | --- |

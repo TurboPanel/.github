@@ -25,7 +25,7 @@ Maintainer memberships are public on GitHub. Repository pin order on the org pro
 ## Decision process
 
 1. **Routine changes** — feature branches and pull requests with maintainer review.
-2. **Cross-repo contracts** — daemon ↔ control plane API changes land in coordinated PRs or a short design note in Discussions first.
+2. **Cross-repo contracts** — daemon ↔ control plane API changes land in coordinated PRs or a short design note in Discord first.
 3. **Breaking changes** — announced in release notes with upgrade paths documented on [turbopanel.io/docs/deployment/compatibility](https://turbopanel.io/docs/deployment/compatibility).
 4. **Security** — handled per [SECURITY.md](./SECURITY.md); embargo until advisory publication.
 

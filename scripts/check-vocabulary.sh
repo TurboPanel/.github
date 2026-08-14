@@ -4,8 +4,8 @@
 # This repo (turbopanel/.github) has no build tooling of its own, so this is
 # a plain POSIX sh scan rather than the Deno/Node checkers in the daemon,
 # instance, and website repos. Keep the forbidden-phrase list in sync with:
-#   - ../daemon/scripts/check-vocabulary.ts
-#   - ../instance/scripts/check-vocabulary.mjs
+#   - ../turbopaneld/scripts/check-vocabulary.ts
+#   - ../turbopanel/scripts/check-vocabulary.mjs
 #   - ../website/scripts/check-vocabulary.mjs
 #
 # The TurboPanel daemon is a "daemon" / "host daemon" / "turbopaneld", never

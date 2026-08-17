@@ -16,8 +16,8 @@ Discuss larger changes in [Discord](https://turbopanel.io/discord) before openin
 
 ## Development setup
 
-1. Read [Development prerequisites](https://turbopanel.io/docs/development/prerequisites).
-2. Follow [Local development](https://turbopanel.io/docs/getting-started/development) for the co-located stack.
+1. Read [Development prerequisites](https://turbopanel.io/docs/development/prerequisites) (Vagrant + provider).
+2. Follow [Local development](https://turbopanel.io/docs/getting-started/development) — clone the six sibling repos, `vagrant up`, `vagrant ssh`, then `~/dev/console`.
 
 The default branch is **`trunk`**. Open a feature branch and submit a pull request — do not commit directly to `trunk`.
 

@@ -30,7 +30,7 @@
 
 ## Open source
 
-All application code is licensed under [AGPL-3.0-only](https://github.com/turbopanel/turbopanel/blob/trunk/LICENSE). See [turbopanel.io/open-source](https://turbopanel.io/open-source) for the license table, trademark policy, and what self-hosting includes.
+The control plane, daemon, product UI, and contributor console are [AGPL-3.0-only](https://github.com/turbopanel/turbopanel/blob/trunk/LICENSE). The UI includes an [Apple App Store additional permission](https://github.com/turbopanel/ui/blob/trunk/LICENSES/TurboPanel-Apple-App-Store-Additional-Permission.txt). The website is [Apache-2.0](https://github.com/turbopanel/website/blob/trunk/LICENSE) (code) and [CC BY 4.0](https://github.com/turbopanel/website/blob/trunk/LICENSES/CC-BY-4.0.txt) (docs). See [turbopanel.io/open-source](https://turbopanel.io/open-source) for the license table, trademark policy, and what self-hosting includes.
 
 ## Community
 

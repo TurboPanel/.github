@@ -17,6 +17,7 @@
 
 ## Checklist
 
+- [ ] I agree to the [Contributor License Agreement](https://github.com/turbopanel/.github/blob/trunk/CLA.md)
 - [ ] Target branch is a feature branch (not `trunk`)
 - [ ] No secrets or environment-specific credentials committed
 - [ ] Docs updated when behavior or public API changed

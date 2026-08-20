@@ -37,4 +37,6 @@ User-installed artifacts publish through GitHub Releases on `turbopanel` and `tu
 
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 - [Contributing](./CONTRIBUTING.md)
+- [Contributor License Agreement](./CLA.md)
+- [Trademarks](./TRADEMARKS.md)
 - [Support routing](./SUPPORT.md)

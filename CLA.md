@@ -2,7 +2,7 @@
 
 This Contributor License Agreement ("Agreement") applies to Contributions
 submitted to the TurboPanel project, maintained by the GitHub organization
-[@turbopanel](https://github.com/turbopanel) (the "Project").
+[@TurboPanel](https://github.com/TurboPanel) (the "Project").
 
 By opening a pull request or otherwise submitting a Contribution, you agree
 to these terms. If you are submitting on behalf of your employer or another

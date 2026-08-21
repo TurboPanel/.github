@@ -6,17 +6,17 @@ Thank you for helping improve TurboPanel. This file is the short routing guide; 
 
 | Change | Repository |
 | --- | --- |
-| Control plane API, auth, daemon cell, database schema | [turbopanel/turbopanel](https://github.com/turbopanel/turbopanel) |
-| Host daemon, Ansible roles, deploy runtime | [turbopanel/turbopaneld](https://github.com/turbopanel/turbopaneld) |
-| Signed-in product console (Expo / Tamagui) | [turbopanel/ui](https://github.com/turbopanel/ui) |
-| Marketing site and documentation (MDX) | [turbopanel/website](https://github.com/turbopanel/website) |
-| Contributor development console | [turbopanel/dev](https://github.com/turbopanel/dev) |
+| Control plane API, auth, daemon cell, database schema | [TurboPanel/turbopanel](https://github.com/TurboPanel/turbopanel) |
+| Host daemon, Ansible roles, deploy runtime | [TurboPanel/turbopaneld](https://github.com/TurboPanel/turbopaneld) |
+| Signed-in product console (Expo / Tamagui) | [TurboPanel/ui](https://github.com/TurboPanel/ui) |
+| Marketing site and documentation (MDX) | [TurboPanel/website](https://github.com/TurboPanel/website) |
+| Contributor development console | [TurboPanel/dev](https://github.com/TurboPanel/dev) |
 
 Discuss larger changes in [Discord](https://turbopanel.io/discord) before opening a large PR.
 
 ## Development setup
 
-1. Read [Development prerequisites](https://turbopanel.io/docs/development/prerequisites) (Intel Core i7-4790K or equivalent, 16 GB RAM minimum / 24 GB+ recommended / 32 GB ideal, Vagrant + provider). Extra Vagrant providers for macOS and Linux are welcome — open a PR against [turbopanel/dev](https://github.com/turbopanel/dev).
+1. Read [Development prerequisites](https://turbopanel.io/docs/development/prerequisites) (Intel Core i7-4790K or equivalent, 16 GB RAM minimum / 24 GB+ recommended / 32 GB ideal, Vagrant + provider). Extra Vagrant providers for macOS and Linux are welcome — open a PR against [TurboPanel/dev](https://github.com/TurboPanel/dev).
 2. Follow [Local development](https://turbopanel.io/docs/getting-started/development) — clone the six sibling repos, `vagrant up`, `vagrant ssh`, then `dev/console`.
 
 The default branch is **`trunk`**. Open a feature branch and submit a pull request — do not commit directly to `trunk`.
@@ -27,9 +27,9 @@ By opening a pull request, you agree to the [Contributor License Agreement](./CL
 
 | Repository | License |
 | --- | --- |
-| `turbopanel`, `turbopaneld`, `dev` | [AGPL-3.0-only](https://github.com/turbopanel/turbopanel/blob/trunk/LICENSE) |
-| `ui` | AGPL-3.0-only with the [Apple App Store additional permission](https://github.com/turbopanel/ui/blob/trunk/LICENSES/TurboPanel-Apple-App-Store-Additional-Permission.txt) |
-| `website` | [Apache-2.0](https://github.com/turbopanel/website/blob/trunk/LICENSE) (code); [CC BY 4.0](https://github.com/turbopanel/website/blob/trunk/LICENSES/CC-BY-4.0.txt) (`docs/`) |
+| `turbopanel`, `turbopaneld`, `dev` | [AGPL-3.0-only](https://github.com/TurboPanel/turbopanel/blob/trunk/LICENSE) |
+| `ui` | AGPL-3.0-only with the [Apple App Store additional permission](https://github.com/TurboPanel/ui/blob/trunk/LICENSES/TurboPanel-Apple-App-Store-Additional-Permission.txt) |
+| `website` | [Apache-2.0](https://github.com/TurboPanel/website/blob/trunk/LICENSE) (code); [CC BY 4.0](https://github.com/TurboPanel/website/blob/trunk/LICENSES/CC-BY-4.0.txt) (`docs/`) |
 
 The TurboPanel name and logos are trademarks. See [TRADEMARKS.md](./TRADEMARKS.md) and [turbopanel.io/open-source](https://turbopanel.io/open-source).
 

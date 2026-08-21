@@ -2,7 +2,7 @@
 
 ## Maintainers
 
-TurboPanel is maintained by the [@turbopanel](https://github.com/turbopanel) organization. Named maintainers review pull requests, triage issues, and publish releases.
+TurboPanel is maintained by the [@TurboPanel](https://github.com/TurboPanel) organization. Named maintainers review pull requests, triage issues, and publish releases.
 
 | Area | Maintainer | GitHub |
 | --- | --- | --- |
@@ -15,12 +15,12 @@ TurboPanel is maintained by the [@turbopanel](https://github.com/turbopanel) org
 
 Maintainer memberships are public on GitHub. Repository pin order on the org profile:
 
-1. [turbopanel](https://github.com/turbopanel/turbopanel) — control plane
-2. [turbopaneld](https://github.com/turbopanel/turbopaneld) — daemon
-3. [ui](https://github.com/turbopanel/ui) — product console
-4. [dev](https://github.com/turbopanel/dev) — contributor environment
-5. [website](https://github.com/turbopanel/website) — marketing and docs
-6. [.github](https://github.com/turbopanel/.github) — community standards
+1. [turbopanel](https://github.com/TurboPanel/turbopanel) — control plane
+2. [turbopaneld](https://github.com/TurboPanel/turbopaneld) — daemon
+3. [ui](https://github.com/TurboPanel/ui) — product console
+4. [dev](https://github.com/TurboPanel/dev) — contributor environment
+5. [website](https://github.com/TurboPanel/website) — marketing and docs
+6. [.github](https://github.com/TurboPanel/.github) — community standards
 
 ## Decision process
 

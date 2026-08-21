@@ -4,13 +4,13 @@ contact_links:
     url: https://turbopanel.io/docs
     about: Guides for install, deployment, API, and architecture
   - name: Help & Q&A (Discussions)
-    url: https://github.com/turbopanel/turbopanel/discussions/categories/help-q-a
+    url: https://github.com/TurboPanel/turbopanel/discussions/categories/help-q-a
     about: Usage questions and configuration help
   - name: Ideas (Discussions)
-    url: https://github.com/turbopanel/turbopanel/discussions/categories/ideas
+    url: https://github.com/TurboPanel/turbopanel/discussions/categories/ideas
     about: Feature requests and product feedback
   - name: Security vulnerability (private)
-    url: https://github.com/turbopanel/turbopanel/security/advisories/new
+    url: https://github.com/TurboPanel/turbopanel/security/advisories/new
     about: Report a security issue privately — do not open a public issue
   - name: Commercial / billing support
     url: https://turbopanel.io/pricing

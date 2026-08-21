@@ -17,7 +17,7 @@ See [Version compatibility](https://turbopanel.io/docs/deployment/compatibility)
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-1. Use [GitHub private vulnerability reporting](https://github.com/turbopanel/turbopanel/security/advisories/new) on the affected repository (`turbopanel`, `turbopaneld`, `ui`, `website`, or `dev`).
+1. Use [GitHub private vulnerability reporting](https://github.com/TurboPanel/turbopanel/security/advisories/new) on the affected repository (`turbopanel`, `turbopaneld`, `ui`, `website`, or `dev`).
 2. Or email **security@turbopanel.io** with encrypted details if private reporting is unavailable.
 
 Full policy and disclosure timeline: [turbopanel.io/security](https://turbopanel.io/security) and [docs/security/reporting](https://turbopanel.io/docs/security/reporting).
@@ -42,4 +42,4 @@ We credit reporters in advisories unless you request anonymity.
 
 ## Advisories
 
-Published advisories appear on [GitHub Security Advisories](https://github.com/turbopanel/turbopanel/security/advisories) and the [security page](https://turbopanel.io/security).
+Published advisories appear on [GitHub Security Advisories](https://github.com/TurboPanel/turbopanel/security/advisories) and the [security page](https://turbopanel.io/security).

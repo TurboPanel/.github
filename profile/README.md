@@ -22,20 +22,20 @@
 
 | Public name | Repository | Role |
 | --- | --- | --- |
-| **TurboPanel Control Plane** | [turbopanel/turbopanel](https://github.com/turbopanel/turbopanel) | API, auth, orchestration hub |
-| **TurboPanel Daemon** | [turbopanel/turbopaneld](https://github.com/turbopanel/turbopaneld) | Host daemon on every managed host |
-| **TurboPanel UI** | [turbopanel/ui](https://github.com/turbopanel/ui) | Signed-in product console |
-| **TurboPanel Development Environment** | [turbopanel/dev](https://github.com/turbopanel/dev) | Contributor dev console |
-| **TurboPanel Website & Docs** | [turbopanel/website](https://github.com/turbopanel/website) | Marketing site and documentation |
+| **TurboPanel Control Plane** | [TurboPanel/turbopanel](https://github.com/TurboPanel/turbopanel) | API, auth, orchestration hub |
+| **TurboPanel Daemon** | [TurboPanel/turbopaneld](https://github.com/TurboPanel/turbopaneld) | Host daemon on every managed host |
+| **TurboPanel UI** | [TurboPanel/ui](https://github.com/TurboPanel/ui) | Signed-in product console |
+| **TurboPanel Development Environment** | [TurboPanel/dev](https://github.com/TurboPanel/dev) | Contributor dev console |
+| **TurboPanel Website & Docs** | [TurboPanel/website](https://github.com/TurboPanel/website) | Marketing site and documentation |
 
 ## Open source
 
-The control plane, daemon, product UI, and contributor console are [AGPL-3.0-only](https://github.com/turbopanel/turbopanel/blob/trunk/LICENSE). The UI includes an [Apple App Store additional permission](https://github.com/turbopanel/ui/blob/trunk/LICENSES/TurboPanel-Apple-App-Store-Additional-Permission.txt). The website is [Apache-2.0](https://github.com/turbopanel/website/blob/trunk/LICENSE) (code) and [CC BY 4.0](https://github.com/turbopanel/website/blob/trunk/LICENSES/CC-BY-4.0.txt) (docs). See [turbopanel.io/open-source](https://turbopanel.io/open-source) for the license table, trademark policy, and what self-hosting includes.
+The control plane, daemon, product UI, and contributor console are [AGPL-3.0-only](https://github.com/TurboPanel/turbopanel/blob/trunk/LICENSE). The UI includes an [Apple App Store additional permission](https://github.com/TurboPanel/ui/blob/trunk/LICENSES/TurboPanel-Apple-App-Store-Additional-Permission.txt). The website is [Apache-2.0](https://github.com/TurboPanel/website/blob/trunk/LICENSE) (code) and [CC BY 4.0](https://github.com/TurboPanel/website/blob/trunk/LICENSES/CC-BY-4.0.txt) (docs). See [turbopanel.io/open-source](https://turbopanel.io/open-source) for the license table, trademark policy, and what self-hosting includes.
 
 ## Community
 
 - [Roadmap](https://turbopanel.io/roadmap) — our progress toward a beta release
-- [Releases](https://github.com/turbopanel/turbopanel/releases) — versioned artifacts and upgrade notes
+- [Releases](https://github.com/TurboPanel/turbopanel/releases) — versioned artifacts and upgrade notes
 - [Discord](https://turbopanel.io/discord) — help, ideas, and announcements
 - [Security policy](https://turbopanel.io/security) — supported versions and private reporting
 

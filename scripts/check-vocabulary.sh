@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# SPDX-License-Identifier: Apache-2.0
 # Vocabulary check for this repo's community-health docs.
 #
 # This repo (turbopanel/.github) has no build tooling of its own, so this is
@@ -7,11 +8,13 @@
 #   - ../turbopaneld/scripts/check-vocabulary.ts
 #   - ../turbopanel/scripts/check-vocabulary.mjs
 #   - ../website/scripts/check-vocabulary.mjs
+#   - ../ui/src/lib/vocabulary.ts
 #
 # The TurboPanel daemon is a "daemon" / "host daemon" / "turbopaneld", never
 # an "agent" -- that word is reserved for coding-agent tooling (AGENTS.md
 # headings, .agents/skills) and unrelated third-party terms (HTTP
-# User-Agent, npm package names).
+# User-Agent, npm package names). Shell chrome is "frosted chrome", never
+# Apple-associated glass product copy.
 #
 # Run: sh scripts/check-vocabulary.sh
 set -eu
@@ -20,13 +23,16 @@ ROOT="$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 # Exact forbidden phrases (case-insensitive). Extend as new daemon-as-agent
-# regressions are found; keep the sibling repo checkers aligned.
+# or Apple-associated chrome regressions are found; keep the sibling repo
+# checkers aligned.
 PHRASES='turbopanel agent
 node agent
 agent host
 agent identity
 agent commit
-server\.daemon\.projection\.agent'
+server\.daemon\.projection\.agent
+liquid glass
+liquid-glass'
 
 # Human-authored community-health docs only; skip git metadata and this
 # script's own source (it necessarily names the forbidden phrases).
@@ -46,7 +52,7 @@ for phrase in $PHRASES; do
   # Allow legitimate coding-agent references (AGENTS.md headings, User-Agent).
   matches=$(printf '%s\n' "$matches" | grep -viE 'user-agent|agent conventions|agent maintenance|\.agents/skills' || true)
   if [ -n "$matches" ]; then
-    echo "Forbidden daemon-as-agent phrase \"$phrase\":"
+    echo "Forbidden phrase \"$phrase\":"
     printf '%s\n' "$matches"
     failed=1
   fi
@@ -57,8 +63,8 @@ IFS=$old_ifs
 
 if [ "$failed" -ne 0 ]; then
   echo ""
-  echo "Vocabulary check failed. TurboPanel's daemon is a \"daemon\" / \"host daemon\" / \"turbopaneld\", never an \"agent\"." >&2
+  echo "Vocabulary check failed. TurboPanel's daemon is a \"daemon\" / \"host daemon\" / \"turbopaneld\", never an \"agent\". Shell chrome is \"frosted chrome\", never Apple-associated glass product copy." >&2
   exit 1
 fi
 
-echo "Vocabulary check passed: no daemon-as-agent phrasing found."
+echo "Vocabulary check passed: no forbidden phrasing found."

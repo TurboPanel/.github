@@ -23,13 +23,16 @@ The default branch is **`trunk`**. Open a feature branch and submit a pull reque
 
 ## License and contributor agreement
 
-By opening a pull request, you agree to the [Contributor License Agreement](./CLA.md).
+By opening a pull request, you agree to the [Contributor License Agreement](./CLA.md). The CLA grants the project rights beyond the public repository license, including specified copyright and patent rights and the ability to license contributions under alternative commercial or proprietary terms.
 
 | Repository | License |
 | --- | --- |
 | `turbopanel`, `turbopaneld`, `dev` | [AGPL-3.0-only](https://github.com/TurboPanel/turbopanel/blob/trunk/LICENSE) |
 | `ui` | AGPL-3.0-only with the [Apple App Store additional permission](https://github.com/TurboPanel/ui/blob/trunk/LICENSES/TurboPanel-Apple-App-Store-Additional-Permission.txt) |
 | `website` | [Apache-2.0](https://github.com/TurboPanel/website/blob/trunk/LICENSE) (code); [CC BY 4.0](https://github.com/TurboPanel/website/blob/trunk/LICENSES/CC-BY-4.0.txt) (`docs/`) |
+| `.github` | Path-based map in [LICENSES/README.md](./LICENSES/README.md) |
+
+Third-party components shipped in artifacts keep their own licenses (see each product repo's `THIRD_PARTY_NOTICES.md`). Third-party marks are never covered by TurboPanel licenses or the UI App Store additional permission. The published model is [Licensing](https://turbopanel.io/docs/getting-started/licensing).
 
 The TurboPanel name and logos are trademarks. See [TRADEMARKS.md](./TRADEMARKS.md) and [turbopanel.io/open-source](https://turbopanel.io/open-source).
 

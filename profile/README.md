@@ -30,7 +30,7 @@
 
 ## Open source
 
-The control plane, daemon, product UI, and contributor console are [AGPL-3.0-only](https://github.com/TurboPanel/turbopanel/blob/trunk/LICENSE). The UI includes an [Apple App Store additional permission](https://github.com/TurboPanel/ui/blob/trunk/LICENSES/TurboPanel-Apple-App-Store-Additional-Permission.txt). The website is [Apache-2.0](https://github.com/TurboPanel/website/blob/trunk/LICENSE) (code) and [CC BY 4.0](https://github.com/TurboPanel/website/blob/trunk/LICENSES/CC-BY-4.0.txt) (docs). See [turbopanel.io/open-source](https://turbopanel.io/open-source) for the license table, trademark policy, and what self-hosting includes.
+The control plane, daemon, product UI, and contributor console are [AGPL-3.0-only](https://github.com/TurboPanel/turbopanel/blob/trunk/LICENSE). The UI includes an [Apple App Store additional permission](https://github.com/TurboPanel/ui/blob/trunk/LICENSES/TurboPanel-Apple-App-Store-Additional-Permission.txt). The website is [Apache-2.0](https://github.com/TurboPanel/website/blob/trunk/LICENSE) (code) and [CC BY 4.0](https://github.com/TurboPanel/website/blob/trunk/LICENSES/CC-BY-4.0.txt) (docs). Third-party components keep their own licenses (per-release `THIRD_PARTY_NOTICES.md`); third-party marks are never covered by TurboPanel licenses or that App Store permission. See [turbopanel.io/open-source](https://turbopanel.io/open-source) and [Licensing](https://turbopanel.io/docs/getting-started/licensing) for the license table, notices, trademark policy, and what self-hosting includes.
 
 ## Community
 

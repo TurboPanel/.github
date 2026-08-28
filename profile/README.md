@@ -3,7 +3,12 @@
 </p>
 
 <p align="center">
-  <strong>Open-source control plane for deploying and operating apps, databases, and servers.</strong>
+  <strong>Host more. Manage less.</strong><br />
+  Run websites, apps, databases, and servers from one fast, always-on control panel.
+</p>
+
+<p align="center">
+  <em>We run the panel. You run what matters — and it's open source, so you can run it yourself when you need to.</em>
 </p>
 
 <p align="center">

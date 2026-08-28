@@ -32,7 +32,15 @@ agent identity
 agent commit
 server\.daemon\.projection\.agent
 liquid glass
-liquid-glass'
+liquid-glass
+seamless
+effortless
+empower
+revolutioniz
+supercharg
+game-chang
+next-generation
+all-in-one'
 
 # Human-authored community-health docs only; skip git metadata and this
 # script's own source (it necessarily names the forbidden phrases).

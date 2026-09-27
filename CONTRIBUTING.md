@@ -14,6 +14,18 @@ Thank you for helping improve TurboPanel. This file is the short routing guide; 
 
 Discuss larger changes in [Discord](https://turbopanel.io/discord) before opening a large PR.
 
+## Review expectations
+
+Opening a pull request proposes a change — it does not obligate a maintainer to merge it as written. Review can land anywhere on this range, and none of it means the contribution was unwelcome:
+
+- Solid idea, needs work: a maintainer asks for changes before merge.
+- Close but not quite: inline suggestions, then you push updates.
+- Needs real restructuring: a maintainer may ask for a substantial rewrite to fit the project's existing architecture and style, not just its coding conventions.
+- Right idea, faster to finish it directly: with "Allow edits from maintainers" enabled on your PR, a maintainer may push commits onto your branch rather than round-trip every change through comments.
+- Not a fit: a maintainer can close a PR without merging it.
+
+This is why larger changes should start as a Discord thread or a GitHub issue before any code is written — a maintainer weighing in on direction first is a lot cheaper than reworking (or unwinding) a large PR built against the wrong architecture.
+
 ## Development setup
 
 1. Read [Development prerequisites](https://turbopanel.io/docs/development/prerequisites) (Intel Core i7-4790K or equivalent, 16 GB RAM minimum / 24 GB+ recommended / 32 GB ideal, Vagrant + provider). Extra Vagrant providers for macOS and Linux are welcome — open a PR against [TurboPanel/dev](https://github.com/TurboPanel/dev).

@@ -69,6 +69,38 @@ for phrase in $PHRASES; do
 done
 IFS=$old_ifs
 
+# Warn mode (not blocking). The terminology page on the website names one word
+# for each part: control plane, app / web app, daemon, server, administrator.
+# These retired words are reported as warnings so new copy can be corrected
+# before the list is promoted to PHRASES. Keep the sibling checkers aligned.
+WARN_PHRASES='the console
+instance owner
+Instance CA
+hosted instance
+remote nodes?
+\bfleet\b'
+warn_count=0
+old_ifs=$IFS
+IFS='
+'
+for phrase in $WARN_PHRASES; do
+  IFS=$old_ifs
+  # shellcheck disable=SC2086
+  hits=$(printf '%s\n' "$FILES" | xargs grep -inE -- "$phrase" 2>/dev/null || true)
+  # Real tool or identifier names are fine (dev console, console.log, ./console).
+  hits=$(printf '%s\n' "$hits" | grep -viE 'console\.(log|error|warn|info)|\./console|dev console|developer console|terminology\.mdx' || true)
+  if [ -n "$hits" ]; then
+    printf '%s\n' "$hits" | sed "s/^/  ! says \"$phrase\" (see the terminology page): /"
+    warn_count=$((warn_count + $(printf '%s\n' "$hits" | wc -l)))
+  fi
+  IFS='
+'
+done
+IFS=$old_ifs
+if [ "$warn_count" -gt 0 ]; then
+  echo "check-vocabulary: $warn_count terminology warning(s) (warn mode, not blocking)."
+fi
+
 if [ "$failed" -ne 0 ]; then
   echo ""
   echo "Vocabulary check failed. TurboPanel's daemon is a \"daemon\" / \"host daemon\" / \"turbopaneld\", never an \"agent\". Shell chrome is \"frosted chrome\", never Apple-associated glass product copy." >&2

@@ -89,8 +89,9 @@ for phrase in $WARN_PHRASES; do
   hits=$(printf '%s\n' "$FILES" | xargs grep -inE -- "$phrase" 2>/dev/null || true)
   # Real tool or identifier names are fine (dev console, console.log, ./console).
   hits=$(printf '%s\n' "$hits" | grep -viE 'console\.(log|error|warn|info)|\./console|dev console|developer console|terminology\.mdx' || true)
+  label=$(printf '%s' "$phrase" | sed 's/\\b//g')
   if [ -n "$hits" ]; then
-    printf '%s\n' "$hits" | sed "s/^/  ! says \"$phrase\" (see the terminology page): /"
+    printf '%s\n' "$hits" | sed "s/^/  ! says \"$label\" (see the terminology page): /"
     warn_count=$((warn_count + $(printf '%s\n' "$hits" | wc -l)))
   fi
   IFS='

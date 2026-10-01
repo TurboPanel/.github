@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest an improvement or new capability for TurboPanel
+title: "[feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Control plane (turbopanel)
+        - Daemon (turbopaneld)
+        - UI (ui)
+        - Dev tooling (dev)
+        - Website / docs (website)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you like TurboPanel to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues for duplicates
+          required: true

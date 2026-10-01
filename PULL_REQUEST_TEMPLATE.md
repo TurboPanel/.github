@@ -10,14 +10,26 @@
 - [ ] Website / docs (`website`)
 - [ ] Dev tooling (`dev`)
 
-## Test plan
+## Testing
 
 - [ ] `pnpm test` / `deno task test` (as applicable)
 - [ ] Manual verification steps listed below
 
+## Release notes
+
+<!-- One line a user would read in the release notes, or "None" for internal changes. -->
+
+## Breaking changes / migrations
+
+<!-- Anything that needs an upgrade step, a schema migration, or a matching change in another repo. "None" if not applicable. -->
+
+## Tooling
+
+<!-- Anything unusual about how this change was produced or verified that a reviewer should know. Optional. -->
+
 ## Checklist
 
 - [ ] I agree to the [Contributor License Agreement](https://github.com/TurboPanel/.github/blob/trunk/CLA.md)
-- [ ] Target branch is a feature branch (not `trunk`)
+- [ ] This PR targets `trunk` from a feature branch
 - [ ] No secrets or environment-specific credentials committed
 - [ ] Docs updated when behavior or public API changed

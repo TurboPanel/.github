@@ -31,7 +31,7 @@ Maintainer memberships are public on GitHub. Repository pin order on the org pro
 
 ## Releases
 
-User-installed artifacts publish through GitHub Releases on `turbopanel` and `turbopaneld`. Channel promotion (`trunk` → `canary` → `rc` → `release`) is operator-driven; see the compatibility matrix in the docs.
+User-installed artifacts publish through GitHub Releases on `turbopanel` and `turbopaneld`. Each green `trunk` build publishes a canary. Merging the automatic `trunk` to `staging` pull request cuts the next release candidate (`x.y.z-rc.N`); merging the automatic `staging` to `live` pull request releases it, re-using the candidate's signed bytes. Versions come from git tags, hotfixes land on `trunk` first, and the daemon ships before the control plane when a change spans both. Only a maintainer merges those pull requests. The full flow is in [CONTRIBUTING.md](./CONTRIBUTING.md#how-changes-ship); see the compatibility matrix in the docs.
 
 ## Community
 

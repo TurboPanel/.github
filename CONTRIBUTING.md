@@ -39,11 +39,11 @@ Every repo follows the same flow; nothing is released by hand-tagging.
 
 1. Your pull request merges into `trunk` (squash). Each green `trunk` build publishes a canary, `x.y.z-canary.N`.
 2. A bot keeps one **Release Candidate** pull request open from `trunk` to `staging`. Merging it (merge commit, once `ci-ok` is green) cuts the next `x.y.z-rc.N`. The rc number stays until that version ships; a bad rc is fixed on `trunk` and the next merge cuts `rc.N+1`.
-3. A second bot pull request, `staging` to `live`, releases the newest rc as `x.y.z`. The release is the same signed bytes that soaked as the rc, re-stamped, never rebuilt.
+3. A second bot pull request, `staging` to `live`, releases the newest rc as `x.y.z`. Merge it with a merge commit once `ci-ok` is green, then approve the `release` environment on the run page. The release is the same signed bytes that soaked as the rc, re-stamped, never rebuilt.
 
 Versions come from git tags; there is no version file to bump. Starting a new minor or major is the one deliberate button: the **Start Next Version** workflow in `turbopaneld`.
 
-Repos release independently, but when a change spans the daemon and the control plane, ship the **daemon first**.
+Repos release independently, and no release waits on a matching release in another repo. When a change spans the daemon and the control plane, ship the **daemon first**.
 
 **Hotfixes go upstream first:** fix it on `trunk` through a normal pull request, then let it flow through the candidate and release pull requests. Do not patch `staging` or `live` directly; direct pushes to them are refused.
 

@@ -41,7 +41,7 @@ Every repo follows the same flow; nothing is released by hand-tagging.
 2. A bot keeps one **Release Candidate** pull request open from `trunk` to `staging`. Merging it (merge commit, once `ci-ok` is green) cuts the next `x.y.z-rc.N`. The rc number stays until that version ships; a bad rc is fixed on `trunk` and the next merge cuts `rc.N+1`.
 3. A second bot pull request, `staging` to `live`, releases the newest rc as `x.y.z`. Merge it with a merge commit once `ci-ok` is green, then approve the `release` environment on the run page. The release is the same signed bytes that soaked as the rc, re-stamped, never rebuilt.
 
-Versions come from git tags; there is no version file to bump. Starting a new minor or major is the one deliberate button: the **Start Next Version** workflow in `turbopaneld`.
+Git tags work out what each repo's next version is, and the version numbers committed in the repo must say the same: a canary build is refused while they disagree. Never change them as part of another change. Right after each release, a bot opens a **chore: start x.y.z** pull request that moves them to the next patch, and it merges itself once its checks pass. Starting a new minor or major is the one deliberate button: the **Start Next Version** workflow in `turbopaneld`, which opens the same kind of pull request for `x.y.0` in each repo, and those merge themselves too.
 
 Repos release independently, and no release waits on a matching release in another repo. When a change spans the daemon and the control plane, ship the **daemon first**.
 

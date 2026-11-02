@@ -1,3 +1,5 @@
+<!-- Title format: type(scope): summary, e.g. fix(auth): refuse expired invites -->
+
 ## Summary
 
 <!-- What changed and why (1–3 sentences). -->
@@ -12,7 +14,7 @@
 
 ## Testing
 
-- [ ] `pnpm test` / `deno task test` (as applicable)
+- [ ] Tests added or updated where it makes sense (CI runs the suites)
 - [ ] Manual verification steps listed below
 
 ## Release notes
@@ -27,9 +29,16 @@
 
 <!-- Anything unusual about how this change was produced or verified that a reviewer should know. Optional. -->
 
+## Twin pull request
+
+<!-- If this change needs a matching pull request in the other repo (control plane and daemon), link it here and use the same branch name in both. The control plane pull request merges first. "None" otherwise. -->
+
 ## Checklist
 
-- [ ] I agree to the [Contributor License Agreement](https://github.com/TurboPanel/.github/blob/trunk/CLA.md)
-- [ ] This PR targets `trunk` from a feature branch
+- [ ] I agree to the [Contributor License Agreement](https://github.com/TurboPanel/.github/blob/trunk/CLA.md) (opening this pull request means I accept it; ticking shows it)
+- [ ] The title follows `type(scope): summary`
+- [ ] This PR targets `trunk` from a feature branch (on a fork is fine)
+- [ ] "Allow edits from maintainers" is on
+- [ ] Changed files are formatted (`pnpm exec prettier --write`, or `deno fmt` for the daemon)
 - [ ] No secrets or environment-specific credentials committed
 - [ ] Docs updated when behavior or public API changed

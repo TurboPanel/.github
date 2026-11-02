@@ -2,7 +2,7 @@
 
 Thank you for helping improve TurboPanel. This file is the short routing guide; the full contributor setup lives in the docs.
 
-## Which repo owns what
+## Which Repo Owns What
 
 | Change | Repository |
 | --- | --- |
@@ -12,9 +12,9 @@ Thank you for helping improve TurboPanel. This file is the short routing guide; 
 | Marketing site and documentation (MDX) | [TurboPanel/website](https://github.com/TurboPanel/website) |
 | Contributor development console | [TurboPanel/dev](https://github.com/TurboPanel/dev) |
 
-Discuss larger changes in [Discord](https://turbopanel.io/discord) before opening a large PR.
+Ask first for anything beyond a small fix: open an issue or start a thread in [Discord](https://turbopanel.io/discord) before writing code. A small fix is a typo or wording change, a documentation correction, or a bug fix of about 50 changed lines or fewer in one repository that adds no feature, no database migration and no change to the messages between the control plane and the daemon.
 
-## Review expectations
+## Review Expectations
 
 Opening a pull request proposes a change — it does not obligate a maintainer to merge it as written. Review can land anywhere on this range, and none of it means the contribution was unwelcome:
 
@@ -26,14 +26,30 @@ Opening a pull request proposes a change — it does not obligate a maintainer t
 
 This is why larger changes should start as a Discord thread or a GitHub issue before any code is written — a maintainer weighing in on direction first is a lot cheaper than reworking (or unwinding) a large PR built against the wrong architecture.
 
-## Development setup
+## Development Setup
+
+You do not need write access. Fork, branch, open a pull request into `trunk`: [Contribute Without Access](https://turbopanel.io/docs/development/contribute-without-access) has the exact commands. The intended one-command setup (arriving with the setup script) is `./scripts/setup.sh` in the `dev` repo, with `doctor` and `status` subcommands; all six repos live inside one folder named `turbopanel`. Maintainers work from the project repos by default; `--fork` makes the script behave like an outside contributor.
 
 1. Read [Development prerequisites](https://turbopanel.io/docs/development/prerequisites) (Intel Core i7-4790K or equivalent, 16 GB RAM minimum / 24 GB+ recommended / 32 GB ideal, Vagrant + provider). Extra Vagrant providers for macOS and Linux are welcome — open a PR against [TurboPanel/dev](https://github.com/TurboPanel/dev).
-2. Follow [Local development](https://turbopanel.io/docs/getting-started/development) — clone the six sibling repos, `vagrant up`, `vagrant ssh`, then `dev/console`.
+2. Pick Vagrant or a Debian 13 machine used directly: [Choosing Direct or Vagrant](https://turbopanel.io/docs/development/choosing-direct-or-vagrant).
+3. Follow [Local development](https://turbopanel.io/docs/getting-started/development) — clone the sibling repos (`dev`, `turbopanel`, `turbopaneld`, `ui`, `website` are required to boot the stack; `.github` is optional), then `vagrant up`, `vagrant ssh` and `dev/console` (Vagrant), or `dev/console` (direct). Clones go over HTTPS through `gh` by default; SSH works if you already use it.
 
-The default branch is **`trunk`**. Open a feature branch and submit a pull request — do not commit directly to `trunk`.
+Pull request titles use `type(scope): summary`, for example `fix(auth): refuse expired invites`. The types are `feat`, `fix`, `chore`, `ci`, `docs`, `refactor`, `test`, `perf`, `build`, `revert` and `style`. The `pr-title` check is advisory but keeps the history readable. Format every changed file before you commit.
 
-## How changes ship
+The default branch is **`trunk`**. Open a feature branch (on your fork if you cannot push to the project) and submit a pull request — do not commit directly to `trunk`.
+
+### What Happens to a Pull Request From a Fork
+
+- Every workflow run on a fork pull request waits for a maintainer to click **Approve workflows to run**, on every push. Expect a wait; nudge on the pull request or in Discord after a day or two.
+- The hosted code scanner needs a secret token and does not run on pull requests from forks. Its steps are skipped on purpose, and `ci-ok` can still go green.
+- Required checks: `ci-ok` in every repo, plus a hosted secret-scan check in `turbopanel`, `turbopaneld`, `ui` and `website`.
+- Signed commits are not required from contributors. GitHub signs the squash commit when a maintainer merges; maintainers sign their own commits. See [Signing and the CLA](https://turbopanel.io/docs/development/signing-and-the-cla).
+
+### Twin Pull Requests
+
+When one feature changes both the control plane (`turbopanel`) and the daemon (`turbopaneld`), open a pull request in each with the **same branch name**, link them in both bodies, and merge the **control plane pull request first**. This is separate from release order, where the daemon ships first (see below). Details, including what to expect from a fork: [Twin Pull Requests](https://turbopanel.io/docs/development/twin-pull-requests).
+
+## How Changes Ship
 
 Every repo follows the same flow; nothing is released by hand-tagging.
 
@@ -43,13 +59,13 @@ Every repo follows the same flow; nothing is released by hand-tagging.
 
 Git tags work out what each repo's next version is, and the version numbers committed in the repo must say the same: a canary build is refused while they disagree. Never change them as part of another change. Right after each release, a bot opens a **chore: start x.y.z** pull request that moves them to the next patch, and it merges itself once its checks pass. Starting a new minor or major is the one deliberate button: the **Start Next Version** workflow in `turbopaneld`, which opens the same kind of pull request for `x.y.0` in each repo, and those merge themselves too.
 
-Repos release independently, and no release waits on a matching release in another repo. When a change spans the daemon and the control plane, ship the **daemon first**.
+Repos release independently, and no release waits on a matching release in another repo. When a change spans the daemon and the control plane, ship the **daemon first** in a release. (Getting the two twin pull requests onto `trunk` is the other way round: control plane pull request first.)
 
 **Hotfixes go upstream first:** fix it on `trunk` through a normal pull request, then let it flow through the candidate and release pull requests. Do not patch `staging` or `live` directly; direct pushes to them are refused.
 
-## License and contributor agreement
+## License and Contributor Agreement
 
-By opening a pull request, you agree to the [Contributor License Agreement](./CLA.md). The CLA grants the project rights beyond the public repository license, including specified copyright and patent rights and the ability to license contributions under alternative commercial or proprietary terms.
+By opening a pull request, you agree to the [Contributor License Agreement](./CLA.md). There is no bot and nothing to sign; the pull request template carries a checkbox that links to it so the agreement is visible. Details: [Signing and the CLA](https://turbopanel.io/docs/development/signing-and-the-cla). The CLA grants the project rights beyond the public repository license, including specified copyright and patent rights and the ability to license contributions under alternative commercial or proprietary terms.
 
 | Repository | License |
 | --- | --- |
@@ -62,17 +78,17 @@ Third-party components shipped in artifacts keep their own licenses (see each pr
 
 The TurboPanel name and logos are trademarks. See [TRADEMARKS.md](./TRADEMARKS.md) and [turbopanel.io/open-source](https://turbopanel.io/open-source).
 
-## Pre-commit gates
+## Pre-Commit Gates
 
-Each repo runs local checks before commit:
+Each repo runs local checks before commit. The secret scan always runs and cannot be skipped. Typechecks and tests are never run by the hooks; CI runs them.
 
-| Repo | Gate |
+| Repo | What the hook runs |
 | --- | --- |
-| `dev`, `ui`, `website` | `scan-secrets.sh` → typecheck → tests |
-| `turbopaneld` | `scan-secrets.sh` → `fmt:check` → `lint` → tests |
-| `turbopanel` | `scan-secrets.sh` → typecheck/tests (Deno) |
+| `dev`, `ui`, `website` | `scan-secrets.sh` only |
+| `turbopanel` | `scan-secrets.sh`, then Prettier on staged `.ts`, `.tsx` and `.mjs` files under `src/` and `scripts/` (skipped when Prettier is not installed locally; `TURBOPANEL_SKIP_HOOK_FORMAT=1` skips it for one commit) |
+| `turbopaneld` | `scan-secrets.sh`, then `deno fmt` check, lint and the static contract guards (`TURBOPANEL_SKIP_HOOK_TESTS=1` skips these when the toolchain is absent) |
 
-Set `TURBOPANEL_SKIP_HOOK_TESTS=1` only when the toolchain is absent locally.
+In Vagrant mode you commit on the host, where there is no Node or Deno tree, so only the secret scan is guaranteed to run. Format your changed files by hand first (`pnpm exec prettier --write <files>`, or `deno fmt <files>` for the daemon); CI rejects an unformatted changed file.
 
 ## Vocabulary
 
@@ -87,7 +103,7 @@ HTTP `User-Agent`, generated type files, migrations, lockfiles, and dependency n
 website repos each carry an equivalent Deno/Node checker — keep the forbidden-phrase lists in sync
 as the vocabulary evolves.
 
-## Code of conduct
+## Code of Conduct
 
 This project follows the [Contributor Covenant](./CODE_OF_CONDUCT.md). By participating, you agree to uphold it.
 

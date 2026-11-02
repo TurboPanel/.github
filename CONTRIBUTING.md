@@ -42,8 +42,8 @@ The default branch is **`trunk`**. Open a feature branch (on your fork if you ca
 
 - Every workflow run on a fork pull request waits for a maintainer to click **Approve workflows to run**, on every push. Expect a wait; nudge on the pull request or in Discord after a day or two.
 - The hosted code scanner needs a secret token and does not run on pull requests from forks. Its steps are skipped on purpose, and `ci-ok` can still go green.
-- Required checks: `ci-ok` in every repo, plus a hosted secret-scan check in `turbopanel`, `turbopaneld`, `ui` and `website`.
-- Signed commits are not required from contributors. GitHub signs the squash commit when a maintainer merges; maintainers sign their own commits. See [Signing and the CLA](https://turbopanel.io/docs/development/signing-and-the-cla).
+- Required checks: `ci-ok` in every code repository, plus a hosted secret-scan check in `turbopanel`, `turbopaneld`, `ui` and `website`.
+- Signed commits are not required from contributors. It is expected that GitHub signs the squash commit when a maintainer merges, but that has not yet been confirmed on an outside pull request (the first one is the trial); the fallback is that a maintainer pushes the branch to the project repo. Maintainers sign their own commits. See [Signing and the CLA](https://turbopanel.io/docs/development/signing-and-the-cla).
 
 ### Twin Pull Requests
 
@@ -86,9 +86,9 @@ Each repo runs local checks before commit. The secret scan always runs and canno
 | --- | --- |
 | `dev`, `ui`, `website` | `scan-secrets.sh` only |
 | `turbopanel` | `scan-secrets.sh`, then Prettier on staged `.ts`, `.tsx` and `.mjs` files under `src/` and `scripts/` (skipped when Prettier is not installed locally; `TURBOPANEL_SKIP_HOOK_FORMAT=1` skips it for one commit) |
-| `turbopaneld` | `scan-secrets.sh`, then `deno fmt` check, lint and the static contract guards (`TURBOPANEL_SKIP_HOOK_TESTS=1` skips these when the toolchain is absent) |
+| `turbopaneld` | `scan-secrets.sh`, then `deno fmt` (which rewrites and re-stages files), `deno lint`, `deno task check:layout` and `deno task check:vocabulary` (`TURBOPANEL_SKIP_HOOK_TESTS=1` skips these when the toolchain is absent) |
 
-In Vagrant mode you commit on the host, where there is no Node or Deno tree, so only the secret scan is guaranteed to run. Format your changed files by hand first (`pnpm exec prettier --write <files>`, or `deno fmt <files>` for the daemon); CI rejects an unformatted changed file.
+In Vagrant mode you commit on the host, where there is no Node or Deno tree, so only the secret scan is guaranteed to run. Format your changed source files inside the guest first (`vagrant ssh`, then `pnpm exec prettier --write <files>` in the repo, or `deno fmt <files>` for the daemon); under direct mode run them in the repo on the machine. CI fails an unformatted changed file.
 
 ## Vocabulary
 

@@ -88,7 +88,7 @@ Each repo runs local checks before commit. The secret scan always runs and canno
 | `turbopanel` | `scan-secrets.sh`, then Prettier on staged `.ts`, `.tsx` and `.mjs` files under `src/` and `scripts/` (skipped when Prettier is not installed locally; `TURBOPANEL_SKIP_HOOK_FORMAT=1` skips it for one commit) |
 | `turbopaneld` | `scan-secrets.sh`, then `deno fmt` (which rewrites and re-stages files), `deno lint`, `deno task check:layout` and `deno task check:vocabulary` (`TURBOPANEL_SKIP_HOOK_TESTS=1` skips these when the toolchain is absent) |
 
-In Vagrant mode you commit on the host, where there is no Node or Deno tree, so only the secret scan is guaranteed to run. Format your changed source files inside the guest first (`vagrant ssh`, then `pnpm exec prettier --write <files>` in the repo, or `deno fmt <files>` for the daemon); under direct mode run them in the repo on the machine. CI fails an unformatted changed file.
+In Vagrant mode you commit on the host, where there is no Node or Deno tree, so only the secret scan is guaranteed to run. Format your changed source files inside the guest first (`vagrant ssh`, then `export PATH="/opt/turbopanel/vendor/node/current/bin:/opt/turbopanel/vendor/deno/current:$PATH"`, then `pnpm exec prettier --write <files>` in the repo, or `deno fmt <files>` for the daemon); under direct mode run them in the repo on the machine with the same `PATH` line, once `dev/console` has installed the runtimes. CI fails an unformatted changed file.
 
 ## Vocabulary
 

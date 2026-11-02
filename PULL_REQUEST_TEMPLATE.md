@@ -39,6 +39,6 @@
 - [ ] The title follows `type(scope): summary`
 - [ ] This PR targets `trunk` from a feature branch (on a fork is fine)
 - [ ] "Allow edits from maintainers" is on
-- [ ] Changed source files are formatted where the tools are: inside the Vagrant guest or on the direct machine (`pnpm exec prettier --write`, or `deno fmt` for the daemon)
+- [ ] Changed source files are formatted where the tools are: inside the Vagrant guest or on the direct machine, with the vendored Node and Deno on your `PATH` (`pnpm exec prettier --write`, or `deno fmt` for the daemon; see the contributing guide)
 - [ ] No secrets or environment-specific credentials committed
 - [ ] Docs updated when behavior or public API changed

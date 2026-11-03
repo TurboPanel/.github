@@ -65,7 +65,7 @@ Repos release independently, and no release waits on a matching release in anoth
 
 ## License and Contributor Agreement
 
-By opening a pull request, you agree to the [Contributor License Agreement](./CLA.md). There is no bot and nothing to sign; the pull request template carries a checkbox that links to it so the agreement is visible. Details: [Signing and the CLA](https://turbopanel.io/docs/development/signing-and-the-cla). The CLA grants the project rights beyond the public repository license, including specified copyright and patent rights and the ability to license contributions under alternative commercial or proprietary terms.
+By opening a pull request, you agree to the [Contributor License Agreement](./CLA.md). There is no bot and nothing to sign; the pull request template links to it so the agreement is visible. Details: [Signing and the CLA](https://turbopanel.io/docs/development/signing-and-the-cla). The CLA grants the project rights beyond the public repository license, including specified copyright and patent rights and the ability to license contributions under alternative commercial or proprietary terms.
 
 | Repository | License |
 | --- | --- |

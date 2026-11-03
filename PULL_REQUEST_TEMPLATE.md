@@ -6,16 +6,11 @@
 
 ## Component
 
-- [ ] Control plane (`turbopanel`)
-- [ ] Daemon (`turbopaneld`)
-- [ ] UI (`ui`)
-- [ ] Website / docs (`website`)
-- [ ] Dev tooling (`dev`)
+<!-- Which part this touches: control plane (`turbopanel`), daemon (`turbopaneld`), UI (`ui`), website / docs (`website`) or dev tooling (`dev`). -->
 
 ## Testing
 
-- [ ] Tests added or updated where it makes sense (CI runs the suites)
-- [ ] Manual verification steps listed below
+<!-- Tests added or updated where it makes sense (CI runs the suites), and any manual verification steps. -->
 
 ## Release notes
 
@@ -33,12 +28,15 @@
 
 <!-- If this change needs a matching pull request in the other repo (control plane and daemon), link it here and use the same branch name in both. The control plane pull request merges first. "None" otherwise. -->
 
-## Checklist
+## Before you open this
 
-- [ ] I agree to the [Contributor License Agreement](https://github.com/TurboPanel/.github/blob/trunk/CLA.md) (opening this pull request means I accept it; ticking shows it)
-- [ ] The title follows `type(scope): summary`
-- [ ] This PR targets `trunk` from a feature branch (on a fork is fine)
-- [ ] "Allow edits from maintainers" is on
-- [ ] Changed source files are formatted where the tools are: inside the Vagrant guest or on the direct machine (in `~/turbopanel/<repo>`), with the vendored Node and Deno on your `PATH` (`pnpm exec prettier --write`, or `deno fmt` for the daemon; see the contributing guide)
-- [ ] No secrets or environment-specific credentials committed
-- [ ] Docs updated when behavior or public API changed
+<!--
+These are reminders, not boxes to tick:
+
+- Opening this pull request means you accept the Contributor License Agreement: https://github.com/TurboPanel/.github/blob/trunk/CLA.md
+- The title follows `type(scope): summary`.
+- The pull request targets `trunk` from a feature branch (a fork is fine), with "Allow edits from maintainers" on.
+- Changed source files are formatted where the tools are: inside the Vagrant guest or on the direct machine (in `~/turbopanel/<repo>`), with the vendored Node and Deno on your `PATH` (`pnpm exec prettier --write`, or `deno fmt` for the daemon; see the contributing guide).
+- No secrets or environment-specific credentials are committed.
+- Docs are updated when behavior or public API changed.
+-->

@@ -28,12 +28,15 @@
 
 <!-- If this change needs a matching pull request in the other repo (control plane and daemon), link it here and use the same branch name in both. The control plane pull request merges first. "None" otherwise. -->
 
+## Contributor License Agreement
+
+- [ ] I accept the [Contributor License Agreement](https://github.com/TurboPanel/.github/blob/trunk/CLA.md). Opening this pull request means you accept it; ticking the box shows it.
+
 ## Before you open this
 
 <!--
-These are reminders, not boxes to tick:
+These are reminders, not boxes to tick (the agreement above is the only box):
 
-- Opening this pull request means you accept the Contributor License Agreement: https://github.com/TurboPanel/.github/blob/trunk/CLA.md
 - The title follows `type(scope): summary`.
 - The pull request targets `trunk` from a feature branch (a fork is fine), with "Allow edits from maintainers" on.
 - Changed source files are formatted where the tools are: inside the Vagrant guest or on the direct machine (in `~/turbopanel/<repo>`), with the vendored Node and Deno on your `PATH` (`pnpm exec prettier --write`, or `deno fmt` for the daemon; see the contributing guide).

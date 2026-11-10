@@ -47,7 +47,7 @@ The default branch is **`trunk`**. Open a feature branch (on your fork if you ca
 
 ### Twin Pull Requests
 
-When one feature changes both the control plane (`turbopanel`) and the daemon (`turbopaneld`), open a pull request in each with the **same branch name**, link them in both bodies, and merge the **control plane pull request first**. This is separate from release order, where the daemon ships first (see below). Details, including what to expect from a fork: [Twin Pull Requests](https://turbopanel.io/docs/development/twin-pull-requests).
+When one feature changes both the control plane (`turbopanel`) and the daemon (`turbopaneld`), open a pull request in each with the **same branch name**, link them in both bodies, and merge the **daemon pull request first**, then the control plane one. Release order is the same: the daemon ships first (see below). Each repository's contract check compares it with the other repository's `trunk`, so the control plane pull request stays red until the daemon half has merged, while the daemon pull request is green on its own. Details, including what to expect from a fork: [Twin Pull Requests](https://turbopanel.io/docs/development/twin-pull-requests).
 
 ## How Changes Ship
 
@@ -59,7 +59,7 @@ Every repo follows the same flow; nothing is released by hand-tagging.
 
 Git tags work out what each repo's next version is, and the version numbers committed in the repo must say the same: a canary build is refused while they disagree. Never change them as part of another change. Right after each release, a bot opens a **chore: start x.y.z** pull request that moves them to the next patch, and it merges itself once its checks pass. Starting a new minor or major is the one deliberate button: the **Start Next Version** workflow in `turbopaneld`, which opens the same kind of pull request for `x.y.0` in each repo, and those merge themselves too.
 
-Repos release independently, and no release waits on a matching release in another repo. When a change spans the daemon and the control plane, ship the **daemon first** in a release. (Getting the two twin pull requests onto `trunk` is the other way round: control plane pull request first.)
+Repos release independently, and no release waits on a matching release in another repo. When a change spans the daemon and the control plane, ship the **daemon first** in a release, just as its pull request merges into `trunk` first.
 
 **Hotfixes go upstream first:** fix it on `trunk` through a normal pull request, then let it flow through the candidate and release pull requests. Do not patch `staging` or `live` directly; direct pushes to them are refused.
 

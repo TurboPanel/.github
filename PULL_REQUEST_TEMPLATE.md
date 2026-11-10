@@ -26,7 +26,7 @@
 
 ## Twin pull request
 
-<!-- If this change needs a matching pull request in the other repo (control plane and daemon), link it here and use the same branch name in both. The control plane pull request merges first. "None" otherwise. -->
+<!-- If this change needs a matching pull request in the other repo (control plane and daemon), link it here and use the same branch name in both. The daemon pull request merges first, then the control plane one. "None" otherwise. -->
 
 ## Before you open this
 

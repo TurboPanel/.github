@@ -8,7 +8,7 @@ Thank you for helping improve TurboPanel. This file is the short routing guide; 
 | --- | --- |
 | Control plane API, auth, daemon cell, database schema | [TurboPanel/turbopanel](https://github.com/TurboPanel/turbopanel) |
 | Host daemon, Ansible roles, deploy runtime | [TurboPanel/turbopaneld](https://github.com/TurboPanel/turbopaneld) |
-| Signed-in product console (Expo / Tamagui) | [TurboPanel/ui](https://github.com/TurboPanel/ui) |
+| Signed-in product console (Expo) | [TurboPanel/ui](https://github.com/TurboPanel/ui) |
 | Marketing site and documentation (MDX) | [TurboPanel/website](https://github.com/TurboPanel/website) |
 | Contributor development console | [TurboPanel/dev](https://github.com/TurboPanel/dev) |
 
